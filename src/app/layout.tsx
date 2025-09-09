@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '@/styles/globals.css';
 import { ReactNode } from 'react';
+import { ThemeProvider } from '@/providers/ThemeProvider';
+import { cn } from '@/utils/cn';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,17 +26,12 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
+        className={cn('antialiased', geistSans.className, geistMono.variable)}
         suppressHydrationWarning
-        className={` ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        <h1 className="flex items-center p-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi praesentium ea qui
-          mollitia molestiae rem quaerat rerum iste, laborum beatae quas veritatis temporibus quia
-          consequatur nesciunt expedita. Atque, suscipit placeat.
-        </h1>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
