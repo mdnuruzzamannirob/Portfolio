@@ -20,6 +20,10 @@ body {
   color: var(--color-foreground);
 }
 
+button {
+  @apply cursor-pointer;
+}
+
 @layer utilities {
   .bg-grid {
     background-image:

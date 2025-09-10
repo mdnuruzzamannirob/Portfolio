@@ -6,7 +6,7 @@ interface ITitleProps {
   className?: string;
 }
 
-const Title = ({ title, description, className }: ITitleProps) => {
+const SectionTitle = ({ title, description, className }: ITitleProps) => {
   return (
     <div
       className={cn('flex flex-col items-center justify-center space-y-5 text-center', className)}
@@ -17,4 +17,4 @@ const Title = ({ title, description, className }: ITitleProps) => {
   );
 };
 
-export default Title;
+export default SectionTitle;

@@ -4,6 +4,7 @@ import Container from '@/components/Container';
 import TechStack from '@/components/TechStack';
 import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
+import ScrollToTopButton from '@/components/ScrollToTobButton';
 
 const HomePage = () => {
   return (
@@ -20,6 +21,8 @@ const HomePage = () => {
       <div className="bg-grid fixed inset-0"></div>
 
       {/* <CircularText /> */}
+
+      <ScrollToTopButton />
 
       {/* Content */}
       <Container>

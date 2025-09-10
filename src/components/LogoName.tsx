@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Logo = () => {
+const LogoName = () => {
   return (
     <Link href="/">
       <span className="font-mono text-xl font-bold">mdnuruzzaman.dev</span>
@@ -8,4 +8,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default LogoName;

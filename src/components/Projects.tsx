@@ -1,9 +1,9 @@
-import Title from './Title';
+import SectionTitle from './SectionTitle';
 
 const Projects = () => {
   return (
     <section id="projects" className="relative h-dvh py-20">
-      <Title
+      <SectionTitle
         title="Projects"
         description=" Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit."
       />

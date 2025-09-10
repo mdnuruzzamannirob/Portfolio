@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from './Logo';
+import LogoName from './LogoName';
 
 const Header = () => {
   const navLinks = [
@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header className="flex w-full items-center justify-between py-10">
-      <Logo />
+      <LogoName />
       <ul className="flex items-center justify-center gap-5">
         {navLinks?.map((link, index) => (
           <li key={index} className="font-medium">
