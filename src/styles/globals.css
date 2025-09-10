@@ -1,26 +1,22 @@
 @import 'tailwindcss';
 
 :root {
-  --color-background: white;
-  --color-foreground: #0a0a0a;
+  --color-background: #0a0f1c;
+  --color-foreground: #ededed;
 
   --font-sans: 'Geist Sans', sans-serif;
   --font-mono: 'Geist Mono', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-  }
+@theme {
+  --color-primary: #2b7ffe;
+  --color-secondary: #fe626b;
+  --color-tertiary: #4ad08e;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-}
-
-body {
   scroll-behavior: smooth;
 }
 
@@ -39,7 +35,7 @@ button {
   .aurora-bg {
     position: relative;
     overflow: hidden;
-    background: #0a0f1c;
+    background: var(--color-background);
   }
 
   .aurora-blob {
@@ -99,7 +95,7 @@ button {
 
   .animate-gradient {
     background-size: 250% 250%;
-    animation: gradient-x 10s ease-in-out infinite;
+    animation: gradient-x 15s ease-in-out infinite;
   }
 
   @keyframes gradient-x {

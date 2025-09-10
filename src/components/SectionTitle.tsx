@@ -11,8 +11,8 @@ const SectionTitle = ({ title, description, className }: ITitleProps) => {
     <div
       className={cn('flex flex-col items-center justify-center space-y-5 text-center', className)}
     >
-      <h1 className="text-4xl font-bold uppercase">{title}</h1>
-      <p className="capitalize">{description}</p>
+      <h1 className="text-4xl font-bold capitalize">{title}</h1>
+      <p className="">{description}</p>
     </div>
   );
 };

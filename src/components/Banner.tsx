@@ -6,11 +6,14 @@ import Link from 'next/link';
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaX } from 'react-icons/fa6';
 import Header from './Header';
 import Lottie from './LottieScrollButton';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 const titles = ['An Amazing', 'An Extra', 'A Fabulous'];
 
 export default function Banner() {
   const [index, setIndex] = useState(0);
+
+  const smoothScroll = useSmoothScroll();
 
   // Rotate headline text every 3s
   useEffect(() => {
@@ -37,14 +40,14 @@ export default function Banner() {
             {titles[index]}
           </motion.h1>
         </AnimatePresence>
-        <h1 className="animate-gradient mt-5 bg-gradient-to-r from-blue-500 via-pink-500 to-yellow-500 bg-clip-text text-7xl font-bold text-transparent">
+        <h1 className="animate-gradient from-primary via-secondary to-tertiary mt-5 bg-gradient-to-r bg-clip-text text-7xl font-bold text-transparent">
           Front End Developer
         </h1>
         <p className="my-10 tracking-wider">
           Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer <br />
           living in Dhaka, Bangladesh & working remotely + Onside.
         </p>
-        <button className="animate-gradient rounded-full bg-gradient-to-r from-blue-500 via-pink-500 to-yellow-500 px-5 py-3 text-white shadow-lg transition">
+        <button className="animate-gradient from-primary via-secondary to-tertiary rounded-full bg-gradient-to-r px-5 py-3 text-white shadow-lg transition">
           Ship stuff with me
         </button>
         <div className="mt-10 flex items-center justify-center gap-5">
@@ -66,9 +69,12 @@ export default function Banner() {
         </div>
       </div>
 
-      <Link href="#about-me" className="absolute bottom-10 left-1/2 -translate-x-1/2">
+      <button
+        onClick={() => smoothScroll('about-me')}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+      >
         <Lottie />
-      </Link>
+      </button>
     </section>
   );
 }

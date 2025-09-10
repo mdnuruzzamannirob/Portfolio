@@ -7,21 +7,23 @@ import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const smoothScroll = useSmoothScroll();
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    // Check scroll position immediately on mount
+    const checkScrollPosition = () => {
+      setIsVisible(window.scrollY > 300);
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+    checkScrollPosition(); // <-- initial check
 
-  const smoothScroll = useSmoothScroll();
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -32,9 +34,9 @@ const ScrollToTopButton = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.3 }}
-          className="fixed right-6 bottom-6 rounded-full bg-blue-500 p-3 text-white shadow-lg transition-colors hover:bg-blue-600"
+          className="border-primary fixed right-6 bottom-6 rounded-full border-2 p-3 text-white shadow-lg transition-colors"
         >
-          <IoIosArrowUp size={20} />
+          <IoIosArrowUp size={20} className="text-secondary" />
         </motion.button>
       )}
     </AnimatePresence>
