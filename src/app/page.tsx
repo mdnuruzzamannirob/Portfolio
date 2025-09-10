@@ -1,6 +1,9 @@
 import Banner from '@/components/Banner';
 import AboutMe from '@/components/AboutMe';
 import Container from '@/components/Container';
+import TechStack from '@/components/TechStack';
+import Projects from '@/components/Projects';
+import ContactMe from '@/components/ContactMe';
 
 const HomePage = () => {
   return (
@@ -22,6 +25,9 @@ const HomePage = () => {
       <Container>
         <Banner />
         <AboutMe />
+        <TechStack />
+        <Projects />
+        <ContactMe />
       </Container>
     </div>
   );

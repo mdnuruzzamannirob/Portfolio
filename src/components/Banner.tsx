@@ -37,14 +37,14 @@ export default function Banner() {
             {titles[index]}
           </motion.h1>
         </AnimatePresence>
-        <h1 className="animate-gradient mt-5 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-7xl font-bold text-transparent">
+        <h1 className="animate-gradient mt-5 bg-gradient-to-r from-blue-400 via-pink-400 to-yellow-400 bg-clip-text text-7xl font-bold text-transparent">
           Front End Developer
         </h1>
         <p className="my-10 tracking-wider">
           Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer <br />
           living in Dhaka, Bangladesh & working remotely + Onside.
         </p>
-        <button className="animate-gradient rounded-full bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 px-5 py-3 text-white shadow-lg transition">
+        <button className="animate-gradient rounded-full bg-gradient-to-r from-blue-400 via-pink-400 to-yellow-400 px-5 py-3 text-white shadow-lg transition">
           Ship stuff with me
         </button>
         <div className="mt-10 flex items-center justify-center gap-5">

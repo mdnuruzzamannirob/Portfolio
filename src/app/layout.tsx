@@ -16,8 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'POrtfolio website',
+  title:
+    'Md. Nuruzzaman | Frontend Developer (React.js & Next.js) | Creating High-Performance, Modern Web Applications',
+  description:
+    'Md. Nuruzzaman | Frontend Developer (React.js & Next.js) | Creating High-Performance, Modern Web Applications',
 };
 
 export default function RootLayout({

@@ -1,14 +1,14 @@
 import Title from './Title';
 
-const AboutMe = () => {
+const Projects = () => {
   return (
-    <section id="about-me" className="relative h-dvh py-20">
+    <section id="projects" className="relative h-dvh py-20">
       <Title
-        title="About Me"
+        title="Projects"
         description=" Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit."
       />
     </section>
   );
 };
 
-export default AboutMe;
+export default Projects;
