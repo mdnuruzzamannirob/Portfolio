@@ -4,7 +4,7 @@ import Container from '@/components/Container';
 import TechStack from '@/components/TechStack';
 import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
-import ScrollToTopButton from '@/components/ScrollToTobButton';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const HomePage = () => {
   return (

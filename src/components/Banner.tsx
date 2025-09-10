@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaX } from 'react-icons/fa6';
+import { FaDiscord, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaX } from 'react-icons/fa6';
 import Header from './Header';
 import Lottie from './LottieScrollButton';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
@@ -51,19 +51,37 @@ export default function Banner() {
           Ship stuff with me
         </button>
         <div className="mt-10 flex items-center justify-center gap-5">
-          <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
+          <Link
+            href="https://github.com/mdnuruzzamannirob"
+            className="text-white/50 transition-colors hover:text-white/80"
+          >
             <FaGithub className="size-5" />
           </Link>
-          <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
+          <Link
+            href="https://www.linkedin.com/in/mdnuruzzamannirobdev"
+            className="text-white/50 transition-colors hover:text-white/80"
+          >
             <FaLinkedin className="size-5" />
           </Link>
-          <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
-            <FaX className="size-5" />
+          <Link
+            href="https://www.facebook.com/mdnuruzzamannirobdev"
+            className="text-white/50 transition-colors hover:text-white/80"
+          >
+            <FaFacebook className="size-5" />
           </Link>
-          <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
+          {/* <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
+            <FaX className="size-5" />
+          </Link>*/}
+          <Link
+            href="https://www.instagram.com/mdnuruzzamannirobdev"
+            className="text-white/50 transition-colors hover:text-white/80"
+          >
             <FaInstagram className="size-5" />
           </Link>
-          <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
+          <Link
+            href="https://discord.com/users/1194867198074830898"
+            className="text-white/50 transition-colors hover:text-white/80"
+          >
             <FaDiscord className="size-5" />
           </Link>
         </div>
