@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import { ReactNode } from 'react';
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import { cn } from '@/utils/cn';
+import SmoothScrollProvider from '@/providers/SmoothScrollProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,7 +34,9 @@ export default function RootLayout({
         className={cn('antialiased', geistSans.className, geistMono.variable)}
         suppressHydrationWarning
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

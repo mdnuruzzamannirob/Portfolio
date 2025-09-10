@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BsArrowUp } from 'react-icons/bs';
+import { IoIosArrowUp } from 'react-icons/io';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,25 +21,20 @@ const ScrollToTopButton = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  const smoothScroll = useSmoothScroll();
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          onClick={scrollToTop}
+          onClick={() => smoothScroll('home')}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.3 }}
           className="fixed right-6 bottom-6 rounded-full bg-blue-500 p-3 text-white shadow-lg transition-colors hover:bg-blue-600"
         >
-          <BsArrowUp size={20} />
+          <IoIosArrowUp size={20} />
         </motion.button>
       )}
     </AnimatePresence>

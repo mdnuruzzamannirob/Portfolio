@@ -21,7 +21,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <section id="#" className="relative min-h-dvh">
+    <section id="home" className="relative min-h-dvh">
       <Header />
 
       <div className="flex flex-col items-center justify-center py-20 text-center">

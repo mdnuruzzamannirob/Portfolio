@@ -20,6 +20,10 @@ body {
   color: var(--color-foreground);
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 button {
   @apply cursor-pointer;
 }
