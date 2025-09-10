@@ -1,11 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-  /* Primary colors */
-  --color-background: rgb(159, 83, 83);
-  --color-foreground: rgb(9, 128, 9);
+  --color-background: white;
+  --color-foreground: #0a0a0a;
 
-  /* Fonts */
   --font-sans: 'Geist Sans', sans-serif;
   --font-mono: 'Geist Mono', monospace;
 }
@@ -20,8 +18,89 @@
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .aurora-bg {
+    position: relative;
+    overflow: hidden;
+    background: #0a0f1c;
+  }
+
+  .aurora-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.2;
+    mix-blend-mode: screen;
+  }
+
+  /* Random blobs with different colors */
+  .aurora-blob-1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 200, 255, 0.4);
+    top: 30%;
+    left: -5%;
+  }
+
+  .aurora-blob-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 255, 150, 0.5);
+    bottom: 0%;
+    left: 20%;
+  }
+
+  .aurora-blob-3 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 150, 0.33);
+    bottom: 5%;
+    right: -10%;
+  }
+
+  .aurora-blob-4 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 0, 0.39);
+    top: -5%;
+    right: 15%;
+  }
+  .aurora-blob-5 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 150, 0, 0.4);
+    top: 10%;
+    left: 30%;
+  }
+  .aurora-blob-6 {
+    width: 400px;
+    height: 400px;
+    background: rgba(150, 0, 255, 0.38);
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .animate-gradient {
+    background-size: 250% 250%;
+    animation: gradient-x 10s ease-in-out infinite;
+  }
+
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 }
