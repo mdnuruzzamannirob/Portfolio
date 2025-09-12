@@ -10,39 +10,27 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiMongodb,
-  SiPostgresql,
-  SiFirebase,
-  SiRedis,
   SiGit,
-  SiDocker,
   SiVercel,
   SiFigma,
-  SiGraphql,
   SiPostman,
   SiNetlify,
   SiGithub,
   SiJsonwebtokens,
-  SiPrisma,
   SiMongoose,
   SiNpm,
   SiYarn,
-  SiPnpm,
   SiEslint,
   SiPrettier,
-  SiJest,
-  SiTestinglibrary,
-  SiCypress,
-  SiMysql,
   SiZod,
 } from 'react-icons/si';
 import { TbBrandFramerMotion, TbTerminal2 } from 'react-icons/tb';
 import { VscVscode } from 'react-icons/vsc';
-import { FaArrowUp, FaCode, FaCube, FaGlobe, FaLock, FaWpforms } from 'react-icons/fa6';
+import { FaCode, FaCube, FaGlobe } from 'react-icons/fa6';
 import { BsDatabase, BsReverseLayoutTextWindowReverse } from 'react-icons/bs';
 import { ImInfinite } from 'react-icons/im';
 import { GrTechnology } from 'react-icons/gr';
-import { MdAccessibilityNew, MdPhoneIphone, MdSchool, MdSpeed } from 'react-icons/md';
-import { FaSearch } from 'react-icons/fa';
+import { MdPhoneIphone, MdSchool, MdSpeed } from 'react-icons/md';
 
 export const techStack = [
   {

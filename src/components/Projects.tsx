@@ -36,19 +36,22 @@ const Projects = () => {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects?.slice(0, visibleCount)?.map((project, index) => (
           <div
-            className="flex flex-col rounded-xl border border-white/5 bg-white/[2%] p-3"
+            className="group/card flex flex-col rounded-xl border border-white/5 bg-white/[2%] p-3"
             key={index}
           >
             <div className="flex-1 space-y-4 pb-3">
-              <div className="h-60 w-full rounded-xl bg-white/10">
+              <Link
+                href={project?.liveUrl}
+                className="block rounded-xl bg-white/10 transition group-hover/card:scale-[101%]"
+              >
                 <Image
                   alt=""
                   src={project?.image}
-                  width={500}
-                  height={500}
-                  className="size-full rounded-xl"
+                  width={374}
+                  height={240}
+                  className="h-60 w-full rounded-xl object-cover object-top"
                 />
-              </div>
+              </Link>
 
               <div className="space-y-1">
                 <h2 className="text-lg font-medium">
