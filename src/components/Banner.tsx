@@ -7,8 +7,7 @@ import { FaDiscord, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaX } from 'r
 import Header from './Header';
 import Lottie from './LottieScrollButton';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
-
-const titles = ['An Amazing', 'An Extra', 'A Fabulous'];
+import { titles } from '@/constants';
 
 export default function Banner() {
   const [index, setIndex] = useState(0);

@@ -1,15 +1,8 @@
+import { navLinks } from '@/constants';
 import LogoName from './LogoName';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 const Header = () => {
-  const navLinks = [
-    { label: 'Home', href: 'home' },
-    { label: 'About Me', href: 'about-me' },
-    { label: 'Tech Stack', href: 'tech-stack' },
-    { label: 'Projects', href: 'projects' },
-    { label: 'Contact Me', href: 'contact-me' },
-  ];
-
   const smoothScroll = useSmoothScroll();
 
   return (
