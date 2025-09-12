@@ -1,11 +1,11 @@
-import { TProject } from '@/types';
+import { IProject } from '@/types';
 import { cn } from '@/utils/cn';
 import Link from 'next/dist/client/link';
 import Image from 'next/image';
 import { MdArrowOutward } from 'react-icons/md';
 
 interface IProjectCardProps {
-  project: TProject;
+  project: IProject;
 }
 
 const ProjectCard = ({ project }: IProjectCardProps) => {

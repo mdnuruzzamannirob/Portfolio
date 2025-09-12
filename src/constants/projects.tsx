@@ -1,4 +1,4 @@
-import { TProject } from '@/types';
+import { IProject } from '@/types';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import {
   SiMongodb,
@@ -10,7 +10,7 @@ import {
   SiStripe,
 } from 'react-icons/si';
 
-export const projects: TProject[] = [
+export const projects: IProject[] = [
   {
     title: 'NextTrade',
     description:
