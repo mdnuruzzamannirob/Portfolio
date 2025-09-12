@@ -3,56 +3,92 @@ import { SiMongodb, SiExpress, SiNextdotjs, SiTailwindcss, SiSocketdotio } from 
 
 export const projects = [
   {
-    title: 'Portfolio Website',
+    title: 'NextTrade',
     description:
-      'A personal portfolio built with Next.js and Tailwind CSS showcasing my projects, skills, and experience.',
+      'An online trading platform providing live market data, interactive charts, user portfolios, and secure buy/sell functionality for stocks and cryptocurrencies.',
+    techStack: [
+      { name: 'React.js', icon: <FaReact className="size-full text-[#61DAFB]" /> },
+      { name: 'Node.js', icon: <FaNodeJs className="size-full text-[#3C873A]" /> },
+      { name: 'Express', icon: <SiExpress className="size-full text-[#000000]" /> },
+      { name: 'MongoDB', icon: <SiMongodb className="size-full text-[#47A248]" /> },
+    ],
+    image: ['/images/projects/trading-1.png', '/images/projects/trading-2.png'],
+    liveUrl: 'https://tradesphere-demo.com',
+    github: {
+      frontend: 'https://github.com/username/tradesphere-frontend',
+      backend: 'https://github.com/username/tradesphere-backend',
+    },
+    projectType: 'Team Project',
+  },
+  {
+    title: 'Invento Wave',
+    description:
+      'A web-based system to manage inventory, suppliers, sales, and stock reports with role-based access and real-time updates.',
+    techStack: [
+      { name: 'React.js', icon: <FaReact className="size-full text-[#61DAFB]" /> },
+      { name: 'Node.js', icon: <FaNodeJs className="size-full text-[#3C873A]" /> },
+      { name: 'Express', icon: <SiExpress className="size-full text-[#000000]" /> },
+      { name: 'MongoDB', icon: <SiMongodb className="size-full text-[#47A248]" /> },
+    ],
+    image: ['/images/projects/ims-1.png', '/images/projects/ims-2.png'],
+    liveUrl: 'https://stockflow-demo.com',
+    github: {
+      frontend: 'https://github.com/username/stockflow-frontend',
+      backend: 'https://github.com/username/stockflow-backend',
+    },
+    projectType: 'Personal Project',
+  },
+  {
+    title: 'Library Hub',
+    description:
+      'A web application to manage library operations including book cataloging, member registration, borrowing/return tracking, and overdue fine management.',
+    techStack: [
+      { name: 'React.js', icon: <FaReact className="size-full text-[#61DAFB]" /> },
+      { name: 'Node.js', icon: <FaNodeJs className="size-full text-[#3C873A]" /> },
+      { name: 'Express', icon: <SiExpress className="size-full text-[#000000]" /> },
+      { name: 'MongoDB', icon: <SiMongodb className="size-full text-[#47A248]" /> },
+    ],
+    image: ['/images/projects/library-1.png', '/images/projects/library-2.png'],
+    liveUrl: 'https://libratrack-demo.com',
+    github: {
+      frontend: 'https://github.com/username/libratrack-frontend',
+      backend: 'https://github.com/username/libratrack-backend',
+    },
+    projectType: 'Personal Project',
+  },
+  {
+    title: 'Brand Shop',
+    description:
+      'A modern car brand website featuring product showcases, model comparisons, booking test drives, and dealership locator.',
     techStack: [
       { name: 'Next.js', icon: <SiNextdotjs className="size-full text-[#000000]" /> },
       { name: 'React.js', icon: <FaReact className="size-full text-[#61DAFB]" /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="size-full text-[#06B6D4]" /> },
     ],
-    image: ['/images/projects/ecommerce.png', '/images/projects/ecommerce.png'],
-    liveUrl: 'https://your-portfolio-link.com',
+    image: ['/images/projects/carbrand-1.png', '/images/projects/carbrand-2.png'],
+    liveUrl: 'https://autodrive-demo.com',
     github: {
-      frontend: 'https://github.com/username/portfolio-frontend',
-      backend: 'https://github.com/username/portfolio-backend',
+      frontend: 'https://github.com/username/autodrive-frontend',
+      backend: 'https://github.com/username/autodrive-backend',
     },
     projectType: 'Personal Project',
   },
   {
-    title: 'E-Commerce Store',
+    title: 'Confer',
     description:
-      'Full-stack MERN e-commerce app with authentication, cart, payment integration, and admin dashboard.',
+      'A system to manage conferences with paper submission, peer review, schedules, and attendee registration.',
     techStack: [
       { name: 'React.js', icon: <FaReact className="size-full text-[#61DAFB]" /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'Express', icon: <SiExpress /> },
-      { name: 'MongoDB', icon: <SiMongodb /> },
+      { name: 'Node.js', icon: <FaNodeJs className="size-full text-[#3C873A]" /> },
+      { name: 'Express', icon: <SiExpress className="size-full text-[#000000]" /> },
+      { name: 'MongoDB', icon: <SiMongodb className="size-full text-[#47A248]" /> },
     ],
-    image: ['/images/projects/ecommerce.png', '/images/projects/ecommerce.png'],
-    liveUrl: 'https://ecommerce-demo.com',
+    image: ['/images/projects/conference-1.png', '/images/projects/conference-2.png'],
+    liveUrl: 'https://confhub-demo.com',
     github: {
-      frontend: 'https://github.com/username/ecommerce-frontend',
-      backend: 'https://github.com/username/ecommerce-backend',
+      frontend: 'https://github.com/username/confhub-frontend',
+      backend: 'https://github.com/username/confhub-backend',
     },
-    projectType: 'Team Project',
-  },
-  {
-    title: 'Chat Application',
-    description:
-      'Real-time chat app with WebSocket support, private/group chats, and emoji reactions.',
-    techStack: [
-      { name: 'React', icon: <FaReact /> },
-      { name: 'Next.js', icon: <SiNextdotjs /> },
-      { name: 'Socket.io', icon: <SiSocketdotio /> },
-      { name: 'MongoDB', icon: <SiMongodb /> },
-    ],
-    image: ['/images/projects/ecommerce.png', '/images/projects/ecommerce.png'],
-    liveUrl: 'https://chat-demo.com',
-    github: {
-      frontend: 'https://github.com/username/chat-frontend',
-      backend: 'https://github.com/username/chat-backend',
-    },
-    projectType: 'Team Project',
+    projectType: 'Personal Project',
   },
 ];
