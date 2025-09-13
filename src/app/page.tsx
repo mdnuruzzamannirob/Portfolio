@@ -6,6 +6,7 @@ import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import { ToastContainer } from 'react-toastify';
+import Footer from '@/components/Footer';
 
 const HomePage = () => {
   return (
@@ -33,6 +34,7 @@ const HomePage = () => {
         <TechStack />
         <Projects />
         <ContactMe />
+        <Footer />
       </Container>
     </div>
   );

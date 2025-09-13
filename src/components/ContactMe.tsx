@@ -90,7 +90,7 @@ const ContactMe: FC = () => {
   );
 
   return (
-    <section id="contact-me" className="relative min-h-dvh space-y-10 py-20">
+    <section id="contact-me" className="relative space-y-10 py-20">
       <SectionTitle
         title="Contact Me"
         description="I'm always happy to discuss opportunities, answer questions, or explore new ideas. Send a message or connect online."

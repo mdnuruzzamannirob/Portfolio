@@ -34,9 +34,9 @@ const ScrollToTopButton = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.3 }}
-          className="border-primary group bg-primary/10 shadow-primary/50 fixed bottom-3 left-1/2 z-[100] flex size-8 -translate-1/2 items-center justify-center rounded-full border-2 text-white shadow-[0_0_30px_rgba(0,0,0,0.2)] transition-colors"
+          className="border-primary group bg-primary/20 shadow-primary/50 fixed right-8 bottom-8 flex size-10 items-center justify-center rounded-full border-2 text-white shadow-[0_0_30px_rgba(0,0,0,0.2)] transition-colors"
         >
-          <IoIosArrowUp className="text-secondary animate-icon size-4" />
+          <IoIosArrowUp className="text-secondary animate-icon size-5" />
         </motion.button>
       )}
     </AnimatePresence>
