@@ -24,7 +24,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative min-h-dvh space-y-10 py-20">
+    <section id="projects" className="relative min-h-dvh space-y-10 py-28">
       <SectionTitle
         title="Projects"
         description="Explore some of the personal and team-based projects I have built showcasing my skills and expertise."

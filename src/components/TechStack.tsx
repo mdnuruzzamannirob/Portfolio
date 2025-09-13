@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle';
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="relative min-h-dvh space-y-10 py-20">
+    <section id="tech-stack" className="relative min-h-dvh space-y-10 py-28">
       <SectionTitle
         title="Tech Stack"
         description="From frontend frameworks to backend systems, databases, DevOps, and key development principle this is my tech toolkit."

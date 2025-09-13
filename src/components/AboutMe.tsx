@@ -7,11 +7,11 @@ import Image from 'next/image';
 
 const AboutMe = () => {
   return (
-    <section id="about-me" className="relative space-y-10 py-20">
+    <section id="about-me" className="relative space-y-10 py-28">
       <SectionTitle title="About Me" />
 
       <div className="flex items-center gap-10">
-        <div className="flex-1 space-y-5">
+        <div className="flex-1 space-y-10">
           <div className="w-full space-y-2">
             <div className="flex items-center gap-3">
               <div className="border-primary/20 flex size-10 items-center justify-center rounded-md border">
@@ -20,7 +20,7 @@ const AboutMe = () => {
               <h2 className="text-primary text-lg font-medium">Bio</h2>
             </div>
 
-            <p className="pl-[52px] text-sm text-white/60">
+            <p className="pl-[52px] text-white/60">
               Frontend Developer with 1+ year of experience building responsive and scalable web
               applications using React and Next.js. Skilled in turning UI/UX designs into
               pixel-perfect, high-performing code, with a strong focus on clean architecture,
@@ -28,7 +28,7 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <div className="flex justify-between gap-5">
+          <div className="flex justify-between gap-10">
             <div className="flex-1 space-y-2">
               <div className="flex items-center gap-3">
                 <div className="border-primary/20 flex size-10 items-center justify-center rounded-md border">
@@ -40,7 +40,7 @@ const AboutMe = () => {
               <div className="space-y-1 pl-[52px]">
                 <h3 className="font-medium">Bachelor of Arts (BA) in English</h3>
                 <p className="text-sm text-white/60">National University</p>
-                <p className="text-sm text-white/60">2023 - Present</p>
+                <p className="text-sm text-white/60">2023 - 2027 (Expected)</p>
               </div>
             </div>
             <div className="flex-1 space-y-2">
