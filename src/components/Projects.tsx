@@ -41,7 +41,7 @@ const Projects = () => {
         <div className="flex justify-center">
           <button
             onClick={handleShowMoreOrLess}
-            className="border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 rounded-lg border px-5 py-2 text-sm font-medium transition"
+            className="bg-primary hover:bg-primary/90 rounded-md px-5 py-2 text-sm font-medium text-white transition"
           >
             {visibleCount < projects.length ? 'Show More' : 'Show Less'}
           </button>

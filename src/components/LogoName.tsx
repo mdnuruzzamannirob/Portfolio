@@ -1,10 +1,12 @@
-import Link from 'next/link';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 const LogoName = () => {
+  const smoothScroll = useSmoothScroll();
+
   return (
-    <Link href="/">
-      <span className="font-mono text-xl font-bold">mdnuruzzaman.dev</span>
-    </Link>
+    <button onClick={() => smoothScroll('home')} className="font-mono text-xl font-bold">
+      mn.dev
+    </button>
   );
 };
 
