@@ -14,7 +14,10 @@ const Footer = () => {
 
       <ul className="flex gap-5 max-lg:flex-col lg:justify-center">
         {navLinks.map((link, index) => (
-          <li key={index} className="text-sm font-medium whitespace-nowrap">
+          <li
+            key={index}
+            className="text-sm font-medium whitespace-nowrap transition hover:text-white"
+          >
             <button onClick={() => smoothScroll(link.href)}>{link.label}</button>
           </li>
         ))}

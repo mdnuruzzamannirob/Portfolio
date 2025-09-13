@@ -4,10 +4,7 @@ import { useState, useRef } from 'react';
 import { navLinks } from '@/constants';
 import LogoName from './LogoName';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
-import { BiCloset, BiMenu } from 'react-icons/bi';
 import { useClickOutside } from '@/hooks/useClickOutside';
-import { HiMenu } from 'react-icons/hi';
-import { RiMenuLine } from 'react-icons/ri';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Header = () => {
@@ -28,18 +25,13 @@ const Header = () => {
           <li key={index} className="font-medium">
             <button
               onClick={() => smoothScroll(link.href)}
-              className="transition hover:text-gray-300"
+              className="text-gray-400 transition hover:text-white"
             >
               {link.label}
             </button>
           </li>
         ))}
       </ul>
-
-      {/* Hire Me button (desktop) */}
-      <button className="hidden rounded-full bg-white px-5 py-3 text-black transition hover:bg-gray-200 md:block">
-        Hire Me
-      </button>
 
       {/* Mobile menu button */}
       <button
@@ -53,27 +45,20 @@ const Header = () => {
       {isOpen && (
         <div
           ref={menuRef}
-          className="absolute top-16 left-0 z-50 w-full rounded-xl bg-zinc-800 p-5 md:hidden"
+          className="absolute top-16 left-0 z-50 flex w-full flex-col gap-5 rounded-xl bg-zinc-800 p-5 md:hidden"
         >
-          <ul className="flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <button
-                  onClick={() => {
-                    smoothScroll(link.href);
-                    setIsOpen(false);
-                  }}
-                  className="w-full text-left font-medium text-white"
-                >
-                  {link.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          <button className="mt-6 w-full rounded-full bg-white px-5 py-3 text-black transition hover:bg-gray-200">
-            Download Resume
-          </button>
+          {navLinks.map((link, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                smoothScroll(link.href);
+                setIsOpen(false);
+              }}
+              className="w-full text-left font-medium text-white"
+            >
+              {link.label}
+            </button>
+          ))}
         </div>
       )}
     </header>

@@ -40,12 +40,15 @@ export default function Banner() {
           </motion.h1>
         </AnimatePresence>
         <h1 className="animate-gradient from-primary via-secondary to-tertiary mt-2 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent sm:mt-3 sm:text-5xl md:mt-5 md:text-6xl lg:text-7xl">
-          Front End Developer
+          Frontend Developer
         </h1>
-        <p className="my-5 text-xs tracking-wider sm:mt-8 md:my-10 md:text-sm lg:text-base">
-          Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer{' '}
+        <p className="my-5 text-xs tracking-wide sm:mt-8 md:my-10 md:text-sm lg:text-base">
+          Hi 👋, My name is Md. Nuruzzaman, and I am a Frontend developer based in Dhaka,{' '}
           <br className="max-sm:hidden" />
-          living in Dhaka, Bangladesh & working remotely + Onside.
+          Bangladesh. I specialize in building modern, responsive web applications.
+          {/* Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer{' '}
+          <br className="max-sm:hidden" />
+          living in Dhaka, Bangladesh & working remotely + Onside. */}
         </p>
         <div className="flex items-center gap-8 max-sm:flex-col">
           <button
