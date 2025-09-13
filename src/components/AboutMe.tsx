@@ -7,14 +7,14 @@ import Image from 'next/image';
 
 const AboutMe = () => {
   return (
-    <section id="about-me" className="relative space-y-10 py-28">
+    <section id="about-me" className="relative my-20 space-y-10 pt-10">
       <SectionTitle title="About Me" />
 
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-10 max-lg:flex-col">
         <div className="flex-1 space-y-10">
           <div className="w-full space-y-2">
             <div className="flex items-center gap-3">
-              <div className="border-primary/20 flex size-10 items-center justify-center rounded-md border">
+              <div className="border-primary/30 flex size-10 items-center justify-center rounded-md border">
                 <TbFileText className="text-primary size-5" />
               </div>
               <h2 className="text-primary text-lg font-medium">Bio</h2>
@@ -28,10 +28,10 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <div className="flex justify-between gap-10">
+          <div className="flex justify-between gap-10 max-sm:flex-col">
             <div className="flex-1 space-y-2">
               <div className="flex items-center gap-3">
-                <div className="border-primary/20 flex size-10 items-center justify-center rounded-md border">
+                <div className="border-primary/30 flex size-10 items-center justify-center rounded-md border">
                   <LuGraduationCap className="text-primary size-5" />
                 </div>
                 <h2 className="text-primary text-lg font-medium">Education</h2>
@@ -45,7 +45,7 @@ const AboutMe = () => {
             </div>
             <div className="flex-1 space-y-2">
               <div className="flex items-center gap-3">
-                <div className="border-primary/20 flex size-10 items-center justify-center rounded-md border">
+                <div className="border-primary/30 flex size-10 items-center justify-center rounded-md border">
                   <MdOutlineWorkOutline className="text-primary size-5" />
                 </div>
                 <h2 className="text-primary text-lg font-medium">Experience</h2>
@@ -60,7 +60,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-sm space-y-5">
+        <div className="w-full max-w-sm flex-col items-center space-y-5 max-lg:flex max-lg:text-center">
           <Image
             alt=""
             src="/mdnuruzzamannirob.jpg"

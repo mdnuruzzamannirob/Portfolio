@@ -46,43 +46,49 @@ export default function Banner() {
           Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer <br />
           living in Dhaka, Bangladesh & working remotely + Onside.
         </p>
-        <button className="animate-gradient from-primary via-secondary to-tertiary rounded-full bg-gradient-to-r px-5 py-3 text-white shadow-lg transition">
-          Ship stuff with me
-        </button>
-        <div className="mt-10 flex items-center justify-center gap-5">
-          <Link
-            href="https://github.com/mdnuruzzamannirob"
-            className="text-white/50 transition-colors hover:text-white/80"
+        <div className="flex items-center gap-8">
+          <button
+            onClick={() => smoothScroll('projects')}
+            className="bg-primary rounded-md px-5 py-2 text-sm text-white shadow-lg transition"
           >
-            <FaGithub className="size-5" />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/mdnuruzzamannirobdev"
-            className="text-white/50 transition-colors hover:text-white/80"
-          >
-            <FaLinkedin className="size-5" />
-          </Link>
-          <Link
-            href="https://www.facebook.com/mdnuruzzamannirobdev"
-            className="text-white/50 transition-colors hover:text-white/80"
-          >
-            <FaFacebook className="size-5" />
-          </Link>
-          {/* <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
+            View Projects
+          </button>
+          <div className="h-9 border border-white/10"></div>
+          <div className="flex items-center justify-center gap-5">
+            <Link
+              href="https://github.com/mdnuruzzamannirob"
+              className="text-white/50 transition-colors hover:text-white/80"
+            >
+              <FaGithub className="size-5" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/mdnuruzzamannirobdev"
+              className="text-white/50 transition-colors hover:text-white/80"
+            >
+              <FaLinkedin className="size-5" />
+            </Link>
+            <Link
+              href="https://www.facebook.com/mdnuruzzamannirobdev"
+              className="text-white/50 transition-colors hover:text-white/80"
+            >
+              <FaFacebook className="size-5" />
+            </Link>
+            {/* <Link href="/" className="text-white/50 transition-colors hover:text-white/80">
             <FaX className="size-5" />
           </Link>*/}
-          <Link
-            href="https://www.instagram.com/mdnuruzzamannirobdev"
-            className="text-white/50 transition-colors hover:text-white/80"
-          >
-            <FaInstagram className="size-5" />
-          </Link>
-          <Link
-            href="https://discord.com/users/1194867198074830898"
-            className="text-white/50 transition-colors hover:text-white/80"
-          >
-            <FaDiscord className="size-5" />
-          </Link>
+            <Link
+              href="https://www.instagram.com/mdnuruzzamannirobdev"
+              className="text-white/50 transition-colors hover:text-white/80"
+            >
+              <FaInstagram className="size-5" />
+            </Link>
+            <Link
+              href="https://discord.com/users/1194867198074830898"
+              className="text-white/50 transition-colors hover:text-white/80"
+            >
+              <FaDiscord className="size-5" />
+            </Link>
+          </div>
         </div>
       </div>
 

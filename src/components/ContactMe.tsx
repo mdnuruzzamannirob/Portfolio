@@ -57,12 +57,12 @@ const ContactMe: FC = () => {
 
   const ContactCard: FC<IContactCard> = ({ icon: Icon, title, description, children }) => (
     <div className="flex gap-3">
-      <div className="border-primary/20 flex size-12 items-center justify-center rounded-md border">
-        <Icon className="text-primary size-6" />
+      <div className="border-primary/20 flex size-10 min-w-10 items-center justify-center rounded-md border">
+        <Icon className="text-primary size-5" />
       </div>
       <div className="space-y-5">
-        <div className="space-y-1">
-          <h2 className="text-primary text-lg font-medium">{title}</h2>
+        <div>
+          <h2 className="text-primary font-medium">{title}</h2>
           <p className="text-sm text-white/60">{description}</p>
         </div>
         {children}
@@ -90,7 +90,7 @@ const ContactMe: FC = () => {
   );
 
   return (
-    <section id="contact-me" className="relative space-y-10 py-28">
+    <section id="contact-me" className="relative my-20 space-y-10 pt-10">
       <SectionTitle
         title="Contact Me"
         description="I'm always happy to discuss opportunities, answer questions, or explore new ideas. Send a message or connect online."

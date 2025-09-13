@@ -35,8 +35,8 @@ import { MdPhoneIphone, MdSchool, MdSpeed } from 'react-icons/md';
 export const techStack = [
   {
     category: 'Frontend',
-    icon: <BsReverseLayoutTextWindowReverse className="size-6" />,
     description: 'Building responsive and dynamic user interfaces.',
+    icon: <BsReverseLayoutTextWindowReverse className="size-5" />,
     skills: [
       {
         name: 'HTML5',
@@ -95,11 +95,12 @@ export const techStack = [
       //   level: 'Beginner',
       // },
     ],
+    level: 'Advanced',
   },
   {
     category: 'Backend',
-    icon: <FaCode className="size-6" />,
     description: 'Creating robust APIs and server-side applications.',
+    icon: <FaCode className="size-5" />,
     skills: [
       {
         name: 'Node.js',
@@ -132,11 +133,12 @@ export const techStack = [
       //   level: 'Intermediate',
       // },
     ],
+    level: 'Beginner',
   },
   {
     category: 'Database',
-    icon: <BsDatabase className="size-6" />,
     description: 'Managing and designing efficient data storage solutions.',
+    icon: <BsDatabase className="size-5" />,
     skills: [
       {
         name: 'MongoDB',
@@ -174,11 +176,12 @@ export const techStack = [
       //   level: 'Intermediate',
       // },
     ],
+    level: 'Beginner',
   },
   {
     category: 'DevOps',
-    icon: <ImInfinite className="size-6" />,
     description: 'Deployment, CI/CD, and server management.',
+    icon: <ImInfinite className="size-5" />,
     skills: [
       { name: 'Git', icon: <SiGit className="size-full text-[#F05032]" />, level: 'Advanced' },
       {
@@ -212,11 +215,12 @@ export const techStack = [
       //   level: 'Intermediate',
       // },
     ],
+    level: 'Beginner',
   },
   {
     category: 'Tools',
-    icon: <GrTechnology className="size-6" />,
     description: 'Design, coding, and productivity tools.',
+    icon: <GrTechnology className="size-5" />,
     skills: [
       {
         name: 'Figma',
@@ -255,11 +259,12 @@ export const techStack = [
         level: 'Intermediate',
       },
     ],
+    level: 'Intermediate',
   },
   {
     category: 'Fundamentals',
-    icon: <MdSchool className="size-6" />,
     description: 'Core web development concepts and best practices.',
+    icon: <MdSchool className="size-5" />,
     skills: [
       {
         name: 'Responsive Design',
@@ -303,5 +308,6 @@ export const techStack = [
       //   level: 'Intermediate',
       // },
     ],
+    level: 'Intermediate',
   },
 ];

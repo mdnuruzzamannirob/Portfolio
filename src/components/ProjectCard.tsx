@@ -59,26 +59,31 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
       </div>
 
       <div className="flex items-center justify-end gap-2 border-t border-white/5 pt-3 text-xs">
-        <Link
-          href={project?.github?.frontend}
-          className="group border-primary/30 text-primary hover:bg-primary/20 flex items-center gap-1 rounded-md border px-3 py-2 transition"
-        >
-          GitHub Client <MdArrowOutward className="rotate-45 transition group-hover:rotate-0" />
-        </Link>
+        {project?.github?.frontend && (
+          <Link
+            href={project?.github?.frontend}
+            className="group border-primary/30 text-primary hover:bg-primary/20 flex items-center gap-1 rounded-md border px-3 py-2 whitespace-nowrap transition max-sm:px-2 max-sm:py-1"
+          >
+            GitHub Client{' '}
+            <MdArrowOutward className="rotate-45 transition group-hover:rotate-0 max-sm:hidden" />
+          </Link>
+        )}
         {project?.github?.backend && (
           <Link
             href={project?.github?.backend}
-            className="group border-primary/30 text-primary hover:bg-primary/20 flex items-center gap-1 rounded-md border px-3 py-2 transition"
+            className="group border-primary/30 text-primary hover:bg-primary/20 flex items-center gap-1 rounded-md border px-3 py-2 whitespace-nowrap transition max-sm:px-2 max-sm:py-1"
           >
-            GitHub Server <MdArrowOutward className="rotate-45 transition group-hover:rotate-0" />
+            GitHub Server{' '}
+            <MdArrowOutward className="rotate-45 transition group-hover:rotate-0 max-sm:hidden" />
           </Link>
         )}
 
         <Link
           href={project?.liveUrl}
-          className="group border-primary/30 text-primary hover:bg-primary/20 flex items-center gap-1 rounded-md border px-3 py-2 transition"
+          className="group border-primary/30 text-primary hover:bg-primary/20 flex items-center gap-1 rounded-md border px-3 py-2 whitespace-nowrap transition max-sm:px-2 max-sm:py-1"
         >
-          Live Site <MdArrowOutward className="rotate-45 transition group-hover:rotate-0" />
+          Live Site{' '}
+          <MdArrowOutward className="rotate-45 transition group-hover:rotate-0 max-sm:hidden" />
         </Link>
       </div>
     </div>
