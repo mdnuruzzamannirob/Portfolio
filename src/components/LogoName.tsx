@@ -4,7 +4,7 @@ const LogoName = () => {
   const smoothScroll = useSmoothScroll();
 
   return (
-    <button onClick={() => smoothScroll('home')} className="font-mono text-xl font-bold">
+    <button onClick={() => smoothScroll('home')} className="font-mono text-xl font-bold text-white">
       mn.dev
     </button>
   );
