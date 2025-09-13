@@ -10,18 +10,18 @@ import SectionTitle from './SectionTitle';
 import { IContactCard, IContactItem, ISocialLink } from '@/types';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
+import { TbLoader } from 'react-icons/tb';
+import { toast } from 'react-toastify';
 
 const ContactMe: FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState('');
 
   const sendEmail = async (e: FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
 
     setIsLoading(true);
-    setStatus('');
 
     const formData = new FormData(formRef.current);
 
@@ -41,11 +41,11 @@ const ContactMe: FC = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
 
-      setStatus('Message sent successfully ✅');
+      toast.success('Thank you! Your message has been sent successfully.');
+
       formRef.current.reset();
     } catch (error) {
-      console.error(error);
-      setStatus('Failed to send ❌ Try again later.');
+      toast.error('Apologies, your message could not be sent. Please try again later.');
     } finally {
       setIsLoading(false);
     }
@@ -192,16 +192,23 @@ const ContactMe: FC = () => {
               placeholder="Enter your message"
               required
               rows={4}
-              className="focus:ring-primary w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm outline-none focus:ring-2"
+              className="focus:ring-primary min-h-[98px] w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm outline-none focus:ring-2"
             />
           </div>
 
           <button
             type="submit"
             disabled={isLoading}
-            className="bg-primary hover:bg-primary/80 w-full rounded-md py-2 text-white/90 transition disabled:opacity-50"
+            className="bg-primary hover:bg-primary/80 disabled:hover:bg-primary w-full rounded-md py-2 text-white/90 transition disabled:opacity-50"
           >
-            {isLoading ? 'Sending...' : 'Send Message'}
+            {isLoading ? (
+              <span className="flex items-center justify-center gap-2">
+                {' '}
+                <TbLoader className="animate-spin-slow text-xl" /> Sending...
+              </span>
+            ) : (
+              'Send Message'
+            )}
           </button>
         </form>
       </div>

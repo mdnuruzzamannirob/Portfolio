@@ -5,6 +5,7 @@ import TechStack from '@/components/TechStack';
 import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
+import { ToastContainer } from 'react-toastify';
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       {/* <CircularText /> */}
 
       <ScrollToTopButton />
+      <ToastContainer />
 
       {/* Content */}
       <Container>
