@@ -1,4 +1,6 @@
-import { FC } from 'react';
+'use client';
+
+import { FC, FormEvent, useRef, useState } from 'react';
 import { HiOutlineLocationMarker, HiOutlineMail } from 'react-icons/hi';
 import { BsTelephone } from 'react-icons/bs';
 import { MdOutlineContactPage } from 'react-icons/md';
@@ -7,8 +9,48 @@ import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaDiscord } from 'react-
 import SectionTitle from './SectionTitle';
 import { IContactCard, IContactItem, ISocialLink } from '@/types';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
 
 const ContactMe: FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState('');
+
+  const sendEmail = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    setIsLoading(true);
+    setStatus('');
+
+    const formData = new FormData(formRef.current);
+
+    const templateParams = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+      time: new Date().toLocaleString(),
+    };
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams as Record<string, unknown>,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      );
+
+      setStatus('Message sent successfully ✅');
+      formRef.current.reset();
+    } catch (error) {
+      console.error(error);
+      setStatus('Failed to send ❌ Try again later.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const ContactCard: FC<IContactCard> = ({ icon: Icon, title, description, children }) => (
     <div className="flex gap-3">
       <div className="border-primary/20 flex size-12 items-center justify-center rounded-md border">
@@ -92,9 +134,76 @@ const ContactMe: FC = () => {
         </div>
 
         {/* Placeholder for form or map */}
-        <div className="flex h-96 w-full items-center justify-center rounded-md border text-white/50">
-          Form / Map goes here
-        </div>
+
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          className="w-full space-y-4 rounded-xl border border-white/5 bg-white/[2%] p-5"
+        >
+          <div className="flex flex-col">
+            <label htmlFor="name" className="mb-1 text-sm text-white/70">
+              Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+              className="focus:ring-primary w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm outline-none focus:ring-2"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="email" className="mb-1 text-sm text-white/70">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              className="focus:ring-primary w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm outline-none focus:ring-2"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="subject" className="mb-1 text-sm text-white/70">
+              Subject
+            </label>
+            <input
+              id="subject"
+              type="text"
+              name="subject"
+              placeholder="Enter subject"
+              required
+              className="focus:ring-primary w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm outline-none focus:ring-2"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="message" className="mb-1 text-sm text-white/70">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              required
+              rows={4}
+              className="focus:ring-primary w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm outline-none focus:ring-2"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="bg-primary hover:bg-primary/80 w-full rounded-md py-2 text-white/90 transition disabled:opacity-50"
+          >
+            {isLoading ? 'Sending...' : 'Send Message'}
+          </button>
+        </form>
       </div>
     </section>
   );
