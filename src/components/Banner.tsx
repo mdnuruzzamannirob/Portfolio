@@ -34,26 +34,27 @@ export default function Banner() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.5 }}
-            className="text-7xl font-bold"
+            className="text-3xl font-bold sm:text-5xl md:text-6xl lg:text-7xl"
           >
             {titles[index]}
           </motion.h1>
         </AnimatePresence>
-        <h1 className="animate-gradient from-primary via-secondary to-tertiary mt-5 bg-gradient-to-r bg-clip-text text-7xl font-bold text-transparent">
+        <h1 className="animate-gradient from-primary via-secondary to-tertiary mt-2 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent sm:mt-3 sm:text-5xl md:mt-5 md:text-6xl lg:text-7xl">
           Front End Developer
         </h1>
-        <p className="my-10 tracking-wider">
-          Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer <br />
+        <p className="my-5 text-xs tracking-wider sm:mt-8 md:my-10 md:text-sm lg:text-base">
+          Hi 👋. My name is Md. Nuruzzaman, and I am a Front End developer{' '}
+          <br className="max-sm:hidden" />
           living in Dhaka, Bangladesh & working remotely + Onside.
         </p>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-8 max-sm:flex-col">
           <button
             onClick={() => smoothScroll('projects')}
             className="bg-primary rounded-md px-5 py-2 text-sm text-white shadow-lg transition"
           >
             View Projects
           </button>
-          <div className="h-9 border border-white/10"></div>
+          <div className="h-9 border border-white/10 max-sm:hidden"></div>
           <div className="flex items-center justify-center gap-5">
             <Link
               href="https://github.com/mdnuruzzamannirob"
@@ -94,7 +95,7 @@ export default function Banner() {
 
       <button
         onClick={() => smoothScroll('about-me')}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 sm:bottom-10"
       >
         <Lottie />
       </button>
