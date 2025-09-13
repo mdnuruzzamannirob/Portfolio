@@ -41,11 +41,15 @@ const ContactMe: FC = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
 
-      toast.success('Thank you! Your message has been sent successfully.');
+      toast.success('Thank you! Your message has been sent successfully.', {
+        style: { background: '#1e2939 ', color: '#ffffff' },
+      });
 
       formRef.current.reset();
     } catch (error) {
-      toast.error('Apologies, your message could not be sent. Please try again later.');
+      toast.error('Apologies, your message could not be sent. Please try again later.', {
+        style: { background: '#1e2939 ', color: '#ffffff' },
+      });
     } finally {
       setIsLoading(false);
     }
